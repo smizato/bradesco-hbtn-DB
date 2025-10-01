@@ -1,0 +1,17 @@
+CREATE TABLE PRODUTO (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    quantidade INT,
+    preco DECIMAL(10, 2),
+    status VARCHAR(50)
+);
+
+
+CREATE TABLE PESSOA (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    idade INTEGER,
+    cpf VARCHAR(11) NOT NULL UNIQUE,
+    data_nascimento DATE
+);
