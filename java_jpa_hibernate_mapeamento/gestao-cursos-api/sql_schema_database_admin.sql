@@ -1,0 +1,54 @@
+DROP TABLE IF EXISTS Professor;
+
+DROP TABLE IF EXISTS Curso;
+
+DROP TABLE IF EXISTS Material_Curso;
+
+DROP TABLE IF EXISTS Endereco;
+
+DROP TABLE IF EXISTS Aluno;
+
+DROP TABLE IF EXISTS Telefone;
+
+CREATE TABLE Professor (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nomeCompleto VARCHAR(255),
+    matricula VARCHAR(50),
+    email VARCHAR(255)
+);
+
+CREATE TABLE Curso (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome VARCHAR(255),
+    sigla VARCHAR(10)
+);
+
+CREATE TABLE Material_Curso (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    url VARCHAR(500)
+);
+
+CREATE TABLE Endereco (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    logradouro VARCHAR(255),
+    endereco VARCHAR(255),
+    numero VARCHAR(20),
+    bairro VARCHAR(100),
+    cidade VARCHAR(100),
+    estado VARCHAR(50),
+    cep INT
+);
+
+CREATE TABLE Aluno (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nomeCompleto VARCHAR(255),
+    matricula VARCHAR(50),
+    nascimento DATE,
+    email VARCHAR(255)
+);
+
+CREATE TABLE Telefone (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    DDD VARCHAR(5),
+    numero VARCHAR(20)
+);
